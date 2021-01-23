@@ -59,14 +59,14 @@ console.log(sumGreaterThanOneHundred(50, 5));
 
 function addAllTheStrings(stringArray) {
     let container = "";
-    for (let i = 0; i<stringArray.length; i++) {
-        container  += stringArray[i]
+    for (let i = 0; i < stringArray.length; i++) {
+        container += stringArray[i];
     }
     return container;
 }
 
-const arraytjeHoor = ["dit", "is", "een", "aan", "elkaar", "geplakte", "array", "met", "strings"]
-console.log(addAllTheStrings(arraytjeHoor))
+const arraytjeHoor = ["dit", "is", "een", "aan", "elkaar", "geplakte", "array", "met", "strings"];
+console.log(addAllTheStrings(arraytjeHoor));
 
 // -------------------------------  INTERMEDIATE
 
@@ -78,6 +78,25 @@ console.log(addAllTheStrings(arraytjeHoor))
 // "koekje" geeft "ejkeok"
 // "vrienden" geeft "nedneirv"
 
+const reverseWord = (word) => word.split("").reverse().join(""); //returned de opgegeven string omgekeerd dmv ingebouwde methoden
+
+
+function reverseWordUsingLoop(word) {
+
+    let containerReverse = "";
+    counter = 1;
+
+    for (let i = 0; i < word.length; i++) {
+        containerReverse += word[word.length - counter];
+        counter++;
+    }
+
+    return containerReverse;
+}
+
+console.log(reverseWord("word"));
+console.log(reverseWordUsingLoop("wordhandmatig"));
+
 
 /* Opdracht 7 */
 // Schrijf een functie die een woord verwacht checkt of dit woord een palindroom is. Een palindroom is een
@@ -88,6 +107,13 @@ console.log(addAllTheStrings(arraytjeHoor))
 // "madam" geeft true
 // "vrienden" geeft false
 
+function isPalindrome(wordToCheck){
+    return wordToCheck === wordToCheck.split("").reverse().join("");
+}
+
+console.log(isPalindrome("woord"))
+console.log(isPalindrome("lepel"))
+console.log(isPalindrome("legovogel"))
 
 /* Opdracht 8 */
 // Schrijf een functie die een string en een letter verwacht. De functie telt hoe vaak die letter voorkomt in
@@ -96,6 +122,25 @@ console.log(addAllTheStrings(arraytjeHoor))
 // "Hans en marietje lopen naar de supermarkt" en "e" geeft 6
 // "Hans is zijn mondkapje vergeten" en "a" geeft 2
 
+// schrijf lege functie die een string en letter verwacht
+// schrijf een counter variabele die begint bij nul
+// schrijf een loop die gedurende de lengte van de string loopt
+// schrijf in de loop een methode die controleert of een letter in de string voorkomt (if else)
+// return de counter variabele
+
+function countCharacter(stringToCheck, characterToCount){
+    let counter = 0;
+
+    for (let i = 0; i < stringToCheck.length; i++) {
+        if (stringToCheck[i] === characterToCount){
+            counter++;
+        }
+    }
+
+    return counter;
+}
+
+console.log(countCharacter("Dit is een string, ben benieuwd hoeveel e's erin zitten", "e"))
 
 // ------------------------------- ADVANCED (optionele bonusopdrachten)
 
