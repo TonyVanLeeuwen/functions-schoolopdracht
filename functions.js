@@ -4,9 +4,11 @@
 // Schrijf een functie die een naam verwacht en een groet teruggeeft
 // ---- Verwachte uitkomsten:
 // "Nova" geeft "Hoi Nova!"
-// "Nick" geeft "Hoi Nick!" a
+// "Nick" geeft "Hoi Nick!"
 
+const greetSomeone = name => "Hoi " + name + "!"; //returned "Hoi [naam]!"
 
+console.log(greetSomeone("Tony"));
 
 /* Opdracht 2 */
 // Schrijf een functie die een hoeveelheid minuten verwacht (als een getal) en teruggeeft
@@ -16,7 +18,9 @@
 // 3 geeft 180
 // 23 geeft 1840
 
+const minutesToSeconds = amount => amount * 60; // returned de hoeveelheid seconden in het aantal opgegeven minuten
 
+console.log(minutesToSeconds(6));
 
 /* Opdracht 3 */
 // Schrijf een functie die een cijfer verwacht en teruggeeft of het cijfer groter is
@@ -26,7 +30,9 @@
 // 0 geeft false
 // 300 geeft true
 
+const greaterThanZero = number => number > 0; // returned true als het groter is dan 0, false als het kleiner is dan 0;
 
+console.log(greaterThanZero(-1));
 
 /* Opdracht 4 */
 // Schrijf een functie die twee getallen verwacht en teruggeeft of ze, opgetelt, gróter zijn dan 100.
@@ -35,7 +41,12 @@
 // 8 en 92 geeft false
 // 89 en 14 geeft true
 
+const sumGreaterThanOneHundred = (numbera, numberb) => (numbera + numberb) > 100;
+//telt de twee opgegeven getallen bij elkaar op
+//en returned true als de som groter is dan 100
+// of false als de som kleiner is dan 100
 
+console.log(sumGreaterThanOneHundred(50, 5));
 
 /* Opdracht 5 */
 // Schrijf een functie die een array van strings verwacht. Hoe lang die array is, weet je niet van tevoren,
@@ -46,7 +57,16 @@
 // ["abra", "cadabra"] geeft "abracadabra"
 // ["a", "b", "c", "d", "e"] geeft "abcde"
 
+function addAllTheStrings(stringArray) {
+    let container = "";
+    for (let i = 0; i<stringArray.length; i++) {
+        container  += stringArray[i]
+    }
+    return container;
+}
 
+const arraytjeHoor = ["dit", "is", "een", "aan", "elkaar", "geplakte", "array", "met", "strings"]
+console.log(addAllTheStrings(arraytjeHoor))
 
 // -------------------------------  INTERMEDIATE
 
@@ -59,7 +79,6 @@
 // "vrienden" geeft "nedneirv"
 
 
-
 /* Opdracht 7 */
 // Schrijf een functie die een woord verwacht checkt of dit woord een palindroom is. Een palindroom is een
 // spiegelwoord: het is hetzelfde zowel vooruit als achterstevoren. Als dit zo is, geeft de functie true terug,
@@ -70,14 +89,12 @@
 // "vrienden" geeft false
 
 
-
 /* Opdracht 8 */
 // Schrijf een functie die een string en een letter verwacht. De functie telt hoe vaak die letter voorkomt in
 // de string en geeft dit terug. Je mag hiervoor geen string- of array-methoden gebruiken.
 // ---- Verwachte uitkomsten:
 // "Hans en marietje lopen naar de supermarkt" en "e" geeft 6
 // "Hans is zijn mondkapje vergeten" en "a" geeft 2
-
 
 
 // ------------------------------- ADVANCED (optionele bonusopdrachten)
@@ -90,14 +107,12 @@
 // lastEntry([46, 65, 34, 204, 190, 89], 3) geeft [204, 190, 89]
 
 
-
 /* Opdracht 10 */
 // Schrijf een functie die een array van getallen verwacht. De functie geeft het hoogste
 // getal in de array terug. Je mag hier geen array-object methoden voor gebruiken zoals .max()
 // ---- Verwachte uitkomsten:
 // [3, 6, 9, 17, 4, 6, 25] geeft 25
 // [46, 65, 34, 204, 190, 89] geeft 204
-
 
 
 /* Opdracht 11 */
