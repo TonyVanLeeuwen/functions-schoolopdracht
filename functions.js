@@ -4,7 +4,7 @@
 // Schrijf een functie die een naam verwacht en een groet teruggeeft
 // ---- Verwachte uitkomsten:
 // "Nova" geeft "Hoi Nova!"
-// "Nick" geeft "Hoi Nick!"
+// "Nick" geeft "Hoi Nick!" a
 
 
 
